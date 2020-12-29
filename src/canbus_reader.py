@@ -23,8 +23,8 @@ def get_data():
     feedback = m.decode(list(raw_data.data))
 
     result.header.stamp = rospy.Time.now()
-    result.Speed_feedback = feedback['Speed_feedback']*0.1
-    result.F_steer_feedback = feedback['F_steer_feedback']*0.151
+    result.Speed_feedback = feedback['Speed_feedback']
+    result.F_steer_feedback = feedback['F_steer_feedback']
     result.Braking_feedback = feedback['Braking_feedback']
     result.Gear_feedback = feedback['Gear_feedback']
     result.mode_feedback = feedback['mode_feedback']

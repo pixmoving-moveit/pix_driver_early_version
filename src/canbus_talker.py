@@ -26,7 +26,7 @@ def callback(data):
             speed = 0
         can_message = m.encode({
             'Speed': speed,
-            'Steering': int(data.data[1]/0.0293),
+            'Steering': data.data[1],
             'Braking': data.data[2],
             'Gear_shift': data.data[3],
             'EPB': data.data[4],

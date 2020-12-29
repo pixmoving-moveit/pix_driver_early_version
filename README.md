@@ -49,16 +49,16 @@
 
 [^ /control_cmd 是底盘控制节点所订阅的topic，该节点的message是一个Int16Multiarray，各个索引所对应的控制信息如下 ]
 
-#### 1. 速度speed物理值区间为0-60km/h，信号区值区间为0-60
-#### 2. 转向steering物理值区间为左30度至右30度，信号值区间为-30-+30
+#### 1. 速度speed物理值区间为0-60km/h，信号区值区间为0-600
+#### 2. 转向steering物理值区间为左30度至右30度，信号值区间为-1024-+1024
 #### 3. 8号字段为自动驾驶使能失能信号
 #### 4. 11号字段为转向模式选择，1为前后轮异向、2为传统模式、3为前后轮同向 
 
 
 | index        | 控制信号  | detail |
 | --------   | -----:  | ----- |
-| 0 |  speed | speed value，0 to 60(0-60KM/H)|
-| 1 |  steering| steering value,-30 to 30（右为正，左为负，转向区间是-30-30|
+| 0 |  speed | speed value，0 to 600(0-60KM/H)|
+| 1 |  steering| steering value,-1024 to 1024（右为正，左为负，转向区间是-30度-30度|
 | 2 | braking| 刹车值0 to 1024|
 | 3 | gear | Gear shift 0x1-D 0x2-N 0x3-R |
 | 4 | EPB | 0-电子驻车关 1-电子驻车开 |
